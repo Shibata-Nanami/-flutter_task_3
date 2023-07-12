@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'memoScreen.dart';
+import 'memo_Screen.dart';
 
 void main() {
 // 最初に表示するWidget

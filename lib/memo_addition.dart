@@ -28,6 +28,7 @@ class _TodoAddPageState extends State<TodoAddPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             // テキスト入力
+
             const TextField(),
             const SizedBox(height: 8),
             SizedBox(
