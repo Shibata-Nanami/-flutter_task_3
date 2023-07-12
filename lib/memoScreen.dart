@@ -1,11 +1,15 @@
 // メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
-
 import 'memoAddition.dart';
 
-class memoScreen extends StatelessWidget {
+class memoScreen extends StatefulWidget {
   const memoScreen({super.key});
 
+  @override
+  State<memoScreen> createState() => _memoScreenState();
+}
+
+class _memoScreenState extends State<memoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
