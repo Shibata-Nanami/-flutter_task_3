@@ -1,4 +1,4 @@
-// メモ一覧画面用のWidget
+/// メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
 import 'memo_Addition.dart';
 
@@ -47,10 +47,10 @@ class _memoScreenState extends State<memoScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // "push"で新規画面に遷移
+          /// "push"で新規画面に遷移
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) {
-              // 遷移先の画面としてリスト追加画面を指定
+              /// 遷移先の画面としてリスト追加画面を指定z
               return const TodoAddPage();
             }),
           );

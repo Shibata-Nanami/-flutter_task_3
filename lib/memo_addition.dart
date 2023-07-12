@@ -1,4 +1,4 @@
-// メモ追加画面用のWidget
+/// メモ追加画面用のWidget
 import 'package:flutter/material.dart';
 
 class TodoAddPage extends StatefulWidget {
@@ -27,14 +27,14 @@ class _TodoAddPageState extends State<TodoAddPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // テキスト入力
-
+            /// テキスト入力
             const TextField(),
             const SizedBox(height: 8),
             SizedBox(
               width: 150,
               height: 70,
-              // リスト追加ボタン
+
+              /// リスト追加ボタン
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
@@ -47,9 +47,9 @@ class _TodoAddPageState extends State<TodoAddPage> {
             ),
             SizedBox(
               child: TextButton(
-                // ボタンをクリックした時の処理
+                /// ボタンをクリックした時の処理
                 onPressed: () {
-                  // "pop"で前の画面に戻る
+                  /// "pop"で前の画面に戻る
                   Navigator.of(context).pop();
                 },
                 child: const Text('リスト追加画面（クリックで戻る）'),
