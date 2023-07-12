@@ -1,5 +1,6 @@
 // メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
+
 import 'memoAddition.dart';
 
 class memoScreen extends StatelessWidget {
@@ -19,14 +20,26 @@ class memoScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.white,
       ),
-      body: ListView(
-        children: const [
-          Card(
-            child: ListTile(
-              title: Text(''),
-            ),
-          ),
-        ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(30),
+          child: ListView.builder(
+              shrinkWrap: true,
+              itemCount: 3,
+              itemBuilder: (context, index) {
+                return const Padding(
+                  padding: EdgeInsets.only(bottom: 20),
+                  child: SizedBox(
+                    width: 80,
+                    height: 80,
+                    child: Card(
+                      color: Colors.white,
+                      child: Text('メモタイトル'),
+                    ),
+                  ),
+                );
+              }),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
