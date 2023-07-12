@@ -41,16 +41,11 @@ class _memoScreenState extends State<memoScreen> {
                       border: Border.all(color: Colors.black),
                       borderRadius: BorderRadius.circular(30),
                     ),
-                    child: const Text('メモタイトル'),
+                    child: const Padding(
+                      padding: EdgeInsets.only(left: 30.0),
+                      child: Text('メモタイトル'),
+                    ),
                   ),
-                  // child: SizedBox(
-                  //   width: 80,
-                  //   height: 80,
-                  //   child: Card(
-                  //     color: Colors.white,
-                  //     child: Text('メモタイトル'),
-                  //   ),
-                  // ),
                 );
               }),
         ),
