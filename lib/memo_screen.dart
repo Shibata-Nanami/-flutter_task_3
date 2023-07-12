@@ -1,15 +1,14 @@
 /// メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
-import 'memo_Addition.dart';
 
-class memoScreen extends StatefulWidget {
-  const memoScreen({super.key});
+class HomeScreenState extends StatefulWidget {
+  const HomeScreenState({super.key});
 
   @override
-  State<memoScreen> createState() => _memoScreenState();
+  State<HomeScreenState> createState() => _HomeScreenStateState();
 }
 
-class _memoScreenState extends State<memoScreen> {
+class _HomeScreenStateState extends State<HomeScreenState> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,18 +48,6 @@ class _memoScreenState extends State<memoScreen> {
                 );
               }),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          /// "push"で新規画面に遷移
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) {
-              /// 遷移先の画面としてリスト追加画面を指定z
-              return const TodoAddPage();
-            }),
-          );
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }

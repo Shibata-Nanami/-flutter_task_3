@@ -8,10 +8,10 @@ final goRouter = GoRouter(
     GoRoute(
         path: '/',
         pageBuilder: (context, state) {
-          return const MaterialPage(child: memoScreen());
+          return const MaterialPage(child: HomeScreenState());
         }),
     GoRoute(
-        path: '/about',
+        path: '/Todo',
         pageBuilder: (context, state) {
           return const MaterialPage(child: TodoAddPage());
         }),
