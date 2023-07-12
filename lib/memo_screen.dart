@@ -31,16 +31,26 @@ class _memoScreenState extends State<memoScreen> {
               shrinkWrap: true,
               itemCount: 3,
               itemBuilder: (context, index) {
-                return const Padding(
-                  padding: EdgeInsets.only(bottom: 20),
-                  child: SizedBox(
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
                     width: 80,
                     height: 80,
-                    child: Card(
-                      color: Colors.white,
-                      child: Text('メモタイトル'),
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.black),
+                      borderRadius: BorderRadius.circular(30),
                     ),
+                    child: const Text('メモタイトル'),
                   ),
+                  // child: SizedBox(
+                  //   width: 80,
+                  //   height: 80,
+                  //   child: Card(
+                  //     color: Colors.white,
+                  //     child: Text('メモタイトル'),
+                  //   ),
+                  // ),
                 );
               }),
         ),
