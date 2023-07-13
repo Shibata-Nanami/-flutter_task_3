@@ -6,4 +6,6 @@ class Model {
 
   final String id;
   final String title;
+
+  static void add(Map<String, Object> map) {}
 }
