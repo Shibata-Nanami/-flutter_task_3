@@ -39,17 +39,24 @@ class _TodoAddPageState extends State<TodoAddPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             /// テキスト入力フォーム
-            TextFormField(
-              controller: _controller,
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Please enter an email';
-                } else {
-                  return null;
-                }
-              },
+            Container(
+              width: 330, // 幅を指定
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: TextFormField(
+                controller: _controller,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter an email';
+                  } else {
+                    return null;
+                  }
+                },
+              ),
             ),
 
             const SizedBox(height: 8),
@@ -74,16 +81,6 @@ class _TodoAddPageState extends State<TodoAddPage> {
                   //pop:前のページに遷移するメソッド
                 },
                 child: const Text('追加', style: TextStyle(color: Colors.white)),
-              ),
-            ),
-            SizedBox(
-              child: GestureDetector(
-                /// ボタンをクリックした時の処理
-                onTap: () {
-                  /// "pop"で前の画面に戻る
-                  context.pop();
-                },
-                child: const Text('リスト追加画面（クリックで戻る）'),
               ),
             ),
           ],
