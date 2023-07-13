@@ -8,7 +8,13 @@ final goRouter = GoRouter(
     GoRoute(
       path: '/',
       pageBuilder: (context, state) {
-        return const MaterialPage(child: HomeScreen());
+        final Map<String, dynamic>? extra =
+            state.extra as Map<String, dynamic>?;
+        String name = extra == null ? '' : extra['name'];
+        return MaterialPage(
+            child: HomeScreen(
+          titleName: name,
+        ));
       },
       routes: [
         GoRoute(
