@@ -1,7 +1,7 @@
 /// メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
-import 'package:flutter_task_3/todo_add_page.dart';
 import 'package:flutter_task_3/Model.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required String titleName});
@@ -87,12 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: FloatingActionButton(
           onPressed: () {
             // "push"で新規画面に遷移
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) {
-                // 遷移先の画面としてリスト追加画面を指定
-                return const TodoAddPage();
-              }),
-            );
+            context.go('/todo');
           },
           backgroundColor: Colors.black,
           child: const Icon(Icons.add),
