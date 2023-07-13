@@ -41,14 +41,12 @@ class _TodoAddPageState extends State<TodoAddPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             /// テキスト入力フォーム
-            Container(
-              width: 330, // 幅を指定
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.black),
-                borderRadius: BorderRadius.circular(15),
-              ),
+
+            SizedBox(
+              width: 300,
               child: TextFormField(
                 controller: _controller,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter an email';
@@ -56,6 +54,11 @@ class _TodoAddPageState extends State<TodoAddPage> {
                     return null;
                   }
                 },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
               ),
             ),
 
