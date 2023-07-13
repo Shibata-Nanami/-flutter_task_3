@@ -1,14 +1,14 @@
 /// メモ一覧画面用のWidget
 import 'package:flutter/material.dart';
 
-class HomeScreenState extends StatefulWidget {
-  const HomeScreenState({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomeScreenState> createState() => _HomeScreenStateState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenStateState extends State<HomeScreenState> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

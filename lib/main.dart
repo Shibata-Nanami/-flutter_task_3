@@ -17,8 +17,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerDelegate: goRouter.routerDelegate,
       routeInformationParser: goRouter.routeInformationParser,
+      routerDelegate: goRouter.routerDelegate,
+      routeInformationProvider: goRouter.routeInformationProvider,
     );
   }
 }
@@ -26,7 +27,7 @@ class _MyAppState extends State<MyApp> {
 //     return const MaterialApp(
 //       title: 'My Todo App',
 
-//       /// リスト一覧画面を表示
+      /// リスト一覧画面を表示
 //       home: HomeScreenState(),
 //     );
 //   }

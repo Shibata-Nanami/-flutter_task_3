@@ -3,7 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class TodoAddPage extends StatefulWidget {
-  const TodoAddPage({super.key});
+  const TodoAddPage({
+    super.key,
+    // required this.menuName, //パラメータを指定する際に必要となる
+  });
+
+  ///パラメータを指定する際に必要となる
+  // final String menuName;
 
   @override
   State<TodoAddPage> createState() => _TodoAddPageState();
