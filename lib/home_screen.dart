@@ -42,8 +42,8 @@ class HomeScreen extends StatefulWidget {
             ),
             TextButton(
               onPressed: () {
-                context.pop(); // ダイアログを閉じる
                 handleOkButtonTap(); // OKボタンの処理を実行
+                context.pop(); // ダイアログを閉じる
               },
               child: const Text('はい'),
             ),
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: const EdgeInsets.only(left: 30), // 左側に空白を追加
                           child: Text(modelData.title),
                         ),
-                        const Spacer(), //右側に寄せる
+                        const Spacer(), //2つのウィジェットの間隔を押し広げる
                         Padding(
                           padding: const EdgeInsets.only(right: 20), //右側に空白を追加
                           child: InkWell(
