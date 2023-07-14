@@ -4,9 +4,7 @@ import 'package:flutter_task_3/Model.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.titleName});
-
-  final String titleName;
+  const HomeScreen({super.key, required String titleName});
 
   void handleOkButtonTap() {
     //削除ボタンではいが押されたときの処理
