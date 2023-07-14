@@ -4,7 +4,56 @@ import 'package:flutter_task_3/Model.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required String titleName});
+  const HomeScreen({super.key, required this.titleName});
+
+  final String titleName;
+
+  void handleOkButtonTap() {
+    //削除ボタンではいが押されたときの処理
+    print('メモタイトル削除');
+  }
+
+  void showConfirmationDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          actionsPadding: const EdgeInsets.all(50),
+          actionsAlignment: MainAxisAlignment.spaceEvenly,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(40.0),
+          ),
+          content: Container(
+            height: 140,
+            alignment: Alignment.bottomCenter,
+            child: const Text(
+              '「メモのタイトル」を\n削除してもよろしいですか？',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 13,
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                context.pop(); // ダイアログを閉じる
+              },
+              child: const Text('いいえ'),
+            ),
+            TextButton(
+              onPressed: () {
+                context.pop(); // ダイアログを閉じる
+                handleOkButtonTap(); // OKボタンの処理を実行
+              },
+              child: const Text('はい'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -67,6 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               icon: const Icon(Icons.delete),
                               iconSize: 35, // アイコンのサイズを指定
                               onPressed: () {
+                                widget.showConfirmationDialog(context);
                                 // ボタンがタップされた時の処理
                               },
                             ),
